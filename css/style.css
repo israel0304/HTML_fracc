@@ -1,0 +1,29 @@
+.numerador{
+     position: relative;
+     width:20px;
+     height: 50px;
+     background: #ffa500;
+     margin: 1px;
+     float: left;
+     
+     
+}
+
+.residuo{
+     position: relative;
+     width: 20px;
+     height: 50px;
+     background: #c3c3c3;
+     margin: 1px;
+     float: left;
+}
+
+.cont{
+     position: relative;
+     display: inline-block;
+     overflow: hidden;
+     max-width: 100px;
+     background: #fafafa;
+     padding: 3px;
+     border:1px solid  #9d9d9d;
+}

@@ -36,7 +36,8 @@ class Fracc{
 
 
 class Cajas{
-  constructor(){
+  constructor(cont){
+    this.cont = cont; 
     this.fracc = new Fracc().generar();
     this.num = this.fracc.num;
     this.den = this.fracc.den;
@@ -44,13 +45,16 @@ class Cajas{
   
   dibujar(){
     m(this.fracc.num+"/"+this.fracc.den);
+    m((this.num/this.den)*50);
+
     for(this.i=0;this.i<this.num;this.i++){
-      $("#cont").append('<div>caja1<div>');
+      $(`#${this.cont}`).append(`<div class="numerador"><div>`);
     }
     for(this.i=0;this.i<(this.den-this.num);this.i++){
-      $("#cont").append('<div>caja2<div>');
+      $("#"+this.cont).append('<div class="residuo"><div>');
     }
     
   }
 }
-let contener = new Cajas().dibujar();
+let contener = new Cajas("cont1").dibujar();
+let contener2 = new Cajas("cont2").dibujar();
